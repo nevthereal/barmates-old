@@ -22,12 +22,15 @@ const Hero = () => {
           Innovative bars made in Switzerland
         </p>
       </div>
-      <div className='text-bmBlue1 m-4'>
-        <a href=''>
-          <p className='font-bold'>Find out more</p>
-          <FontAwesomeIcon className='text-2xl' icon={faChevronDown} />
-        </a>
-      </div>
+      <a href='#about' className='text-bmBlue1 mb-8 group'>
+        <p className='font-bold group-hover:text-bmBlue2 duration-200'>
+          Find out more!
+        </p>
+        <FontAwesomeIcon
+          className='text-2xl group-hover:translate-y-2 group-hover:text-bmBlue2 duration-200 ease-in-out'
+          icon={faChevronDown}
+        />
+      </a>
     </div>
   );
 };
