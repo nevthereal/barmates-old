@@ -1,7 +1,6 @@
-import Typed from "typed.js";
-import { useRef, useEffect } from "react";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { motion } from "framer-motion";
 
 const Home = () => {
   return (
@@ -12,32 +11,26 @@ const Home = () => {
 };
 
 const Hero = () => {
-  const el = useRef(null);
-
-  useEffect(() => {
-    const typed = new Typed(el.current, {
-      strings: ["Innovative", "Delicious", "Saturating", "Protein-Rich"],
-      typeSpeed: 60,
-      backSpeed: 40,
-      loop: true,
-      loopCount: 20,
-    });
-
-    return () => {
-      typed.destroy();
-    };
-  }, []);
   return (
     <div className='h-[70dvh] hero flex flex-col text-center'>
-      <div className='mx-auto my-auto'>
+      <motion.div
+        initial={{ translateY: 200, opacity: 0 }}
+        animate={{ translateY: 0, opacity: 1 }}
+        transition={{
+          type: "spring",
+          stiffness: 250,
+          damping: 20,
+          duration: 750,
+        }}
+        className='mx-auto my-auto'
+      >
         <h1 className='text-bmPink1 font-black text-6xl md:text-9xl font-[Montserrat]'>
           BarMates
         </h1>
         <p className='text-bmBlue1 font-bold text-base md:text-3xl'>
-          <span className='font-extrabold' ref={el}></span> bars made in
-          Switzerland
+          Innovative bars made in Switzerland
         </p>
-      </div>
+      </motion.div>
       <a
         href='#about'
         className='text-bmBlue1 hover:text-bmBlue2 mb-8 group mx-auto'
@@ -52,6 +45,10 @@ const Hero = () => {
       </a>
     </div>
   );
+};
+
+const About = () => {
+  return <></>;
 };
 
 export default Home;
