@@ -4,25 +4,25 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Header = () => {
   return (
-    <header className='flex justify-between p-4 bg-white uppercase font-black font-[Montserrat]'>
+    <header className='flex justify-between p-2 md:p-4 bg-white uppercase font-black font-[Montserrat]'>
       <a
         href='/'
-        className='w-24 hover:rotate-12 hover:scale-110 ease-in-out duration-100'
+        className='w-20 md:w-24 hover:rotate-12 hover:scale-110 ease-in-out duration-100'
       >
         <img src={BarSVG} alt='' />
       </a>
-      <div className='text-2xl my-auto text-bmPink1 flex gap-8'>
+      <div className='md:text-2xl text-bmPink1 flex gap-2 md:gap-8'>
         <a
-          className='hover:text-bmBlue1 hover:scale-110 ease-in-out duration-300'
+          className='hover:text-bmBlue1 hover:scale-110 ease-in-out duration-300 my-auto'
           href='/catalogue'
         >
           Catalogue
         </a>
         <a
-          className='hover:text-bmBlue1 hover:scale-110 ease-in-out duration-300'
+          className='hover:text-bmBlue1 hover:scale-110 ease-in-out duration-300 my-auto'
           href='/mission'
         >
-          Our Mission
+          Mission
         </a>
       </div>
       <FontAwesomeIcon
