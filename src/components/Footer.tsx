@@ -4,7 +4,7 @@ const Footer = () => {
       <a
         href='https://instagram.com/barmates_official'
         target='_blank'
-        className='font-[Montserrat] text-3xl font-black'
+        className='text-lg font-black'
       >
         Instagram
       </a>
