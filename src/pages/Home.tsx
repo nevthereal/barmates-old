@@ -5,9 +5,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Hero />
-    </div>
+    </>
   );
 };
 
