@@ -7,12 +7,12 @@ const Footer = () => {
   };
 
   return (
-    <footer className='grid md:grid-flow-col grid-flow-row text-bmPink1 pt-2 md:pt-10'>
-      <div className='flex flex-col md:flex-row gap-2 md:gap-8 justify-center'>
+    <footer className='grid md:grid-flow-col grid-flow-row text-bmPink1 p-4 md:pt-10'>
+      <div className='text-center md:text-left flex flex-col md:flex-row gap-2 md:gap-8 justify-center mb-2 md:mb-0'>
         <img
           src={BarMatesLogo}
           alt='barmates logo'
-          className='md:h-32 aspect-square'
+          className='md:h-24 aspect-square h-24 mx-auto md:mx-0 hidden md:block'
         />
         <div className='my-auto'>
           <p className='font-[Montserrat] font-black italic text-xl md:text-4xl'>
@@ -21,19 +21,19 @@ const Footer = () => {
           <p className='font-semibold'>Zurich, Switzerland</p>
         </div>
       </div>
-      <div className='grid md:grid-flow-col grid-flow-row text-lg'>
-        <div>
+      <div className='grid md:grid-flow-col grid-flow-row text-lg text-center md:text-left'>
+        <div className='my-2 md:my-0'>
           <h1 className={style.listHeading}>Founders</h1>
           <ul className={style.listStyle}>
             <li>
-              <a href='https://instagram.com/nevillebrem'>Neville</a>
+              <a href='https://instagram.com/marking27'>Marko</a>
             </li>
             <li>
-              <a href='https://instagram.com/marking27'>Marko</a>
+              <a href='https://instagram.com/nevillebrem'>Neville</a>
             </li>
           </ul>
         </div>
-        <div>
+        <div className='my-2 md:my-0'>
           <h1 className={style.listHeading}>Social</h1>
           <ul className={style.listStyle}>
             <li>
