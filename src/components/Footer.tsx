@@ -1,30 +1,46 @@
+import BarMatesLogo from "../assets/LOGO ROUNDED RASTER.png";
+
 const Footer = () => {
+  const style = {
+    listHeading: `font-bold font-[Montserrat]`,
+    listStyle: `font-semibold text-bmPink2`,
+  };
+
   return (
-    <footer className='text-bmBlue1 text-center pt-4'>
-      <a
-        href='https://instagram.com/barmates_official'
-        target='_blank'
-        className='text-lg font-black'
-      >
-        Instagram
-      </a>
-      <div className='flex gap-2 justify-center text-lg font-bold'>
-        <p>
-          Founded by{" "}
-          <a
-            href='https://instagram.com/marking207'
-            className='text-bmPink1 hover:text-bmPink2 duration-300'
-          >
-            Marko
-          </a>{" "}
-          and{" "}
-          <a
-            href='https://instagram.com/nevillebrem'
-            className='text-bmPink1 hover:text-bmPink2 duration-300'
-          >
-            Neville
-          </a>
-        </p>
+    <footer className='grid md:grid-flow-col grid-flow-row text-bmPink1 pt-2 md:pt-10'>
+      <div className='flex flex-col md:flex-row gap-2 md:gap-8 justify-center'>
+        <img
+          src={BarMatesLogo}
+          alt='barmates logo'
+          className='md:h-32 aspect-square'
+        />
+        <div className='my-auto'>
+          <p className='font-[Montserrat] font-black italic text-xl md:text-4xl'>
+            BarMates
+          </p>
+          <p className='font-semibold'>Zurich, Switzerland</p>
+        </div>
+      </div>
+      <div className='grid md:grid-flow-col grid-flow-row text-lg'>
+        <div>
+          <h1 className={style.listHeading}>Founders</h1>
+          <ul className={style.listStyle}>
+            <li>
+              <a href='https://instagram.com/nevillebrem'>Neville</a>
+            </li>
+            <li>
+              <a href='https://instagram.com/marking27'>Marko</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h1 className={style.listHeading}>Social</h1>
+          <ul className={style.listStyle}>
+            <li>
+              <a href='https://instagram.com/barmates_official'>Instagram</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
   );
