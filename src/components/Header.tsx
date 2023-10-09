@@ -11,22 +11,22 @@ const Header = () => {
       >
         <img src={BarSVG} alt='' />
       </a>
-      <div className='text-2xl my-auto text-bmPink1 flex gap-4'>
+      <div className='text-2xl my-auto text-bmPink1 flex gap-8'>
         <a
-          className='hover:text-bmPink2 hover:scale-110 ease-in-out duration-200'
+          className='hover:text-bmBlue1 hover:scale-110 ease-in-out duration-300'
           href='/catalogue'
         >
           Catalogue
         </a>
         <a
-          className='hover:text-bmPink2 hover:scale-110 ease-in-out duration-200'
+          className='hover:text-bmBlue1 hover:scale-110 ease-in-out duration-300'
           href='/mission'
         >
           Our Mission
         </a>
       </div>
       <FontAwesomeIcon
-        className='text-bmBlue1 hover:text-bmBlue2 text-3xl my-auto hover:scale-110 ease-in-out duration-100 cursor-pointer'
+        className='text-bmBlue1 hover:text-bmPink1 text-3xl my-auto hover:scale-110 ease-in-out duration-300 cursor-pointer'
         icon={faUser}
       />
     </header>

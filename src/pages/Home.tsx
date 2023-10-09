@@ -9,8 +9,6 @@ const Home = () => {
   );
 };
 
-export default Home;
-
 const Hero = () => {
   return (
     <div className='h-[70dvh] hero flex flex-col text-center'>
@@ -22,15 +20,17 @@ const Hero = () => {
           Innovative bars made in Switzerland
         </p>
       </div>
-      <a href='#about' className='text-bmBlue1 mb-8 group'>
-        <p className='font-bold group-hover:text-bmBlue2 duration-200'>
+      <a href='#about' className='text-bmBlue1 mb-8 group mx-auto'>
+        <p className='md:text-xl font-bold group-hover:text-bmBlue2 duration-200'>
           Find out more!
         </p>
         <FontAwesomeIcon
-          className='text-2xl group-hover:translate-y-2 group-hover:text-bmBlue2 duration-200 ease-in-out'
+          className='text-2xl md:text-4xl group-hover:translate-y-2 group-hover:text-bmBlue2 duration-200 ease-in-out'
           icon={faChevronDown}
         />
       </a>
     </div>
   );
 };
+
+export default Home;
