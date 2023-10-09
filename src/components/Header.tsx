@@ -13,20 +13,20 @@ const Header = () => {
       </a>
       <div className='md:text-2xl text-bmPink1 flex gap-2 md:gap-8'>
         <a
-          className='hover:text-bmBlue1 hover:scale-110 ease-in-out duration-300 my-auto'
+          className='hover:text-bmPink2 hover:scale-110 ease-in-out duration-300 my-auto'
           href='/catalogue'
         >
           Catalogue
         </a>
         <a
-          className='hover:text-bmBlue1 hover:scale-110 ease-in-out duration-300 my-auto'
+          className='hover:text-bmPink2 hover:scale-110 ease-in-out duration-300 my-auto'
           href='/mission'
         >
           Mission
         </a>
       </div>
       <FontAwesomeIcon
-        className='text-bmBlue1 hover:text-bmPink1 text-3xl my-auto hover:scale-110 ease-in-out duration-300 cursor-pointer'
+        className='text-bmBlue1 hover:text-bmBlue2 text-3xl my-auto hover:scale-110 ease-in-out duration-300 cursor-pointer'
         icon={faUser}
       />
     </header>
