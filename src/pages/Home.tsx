@@ -62,7 +62,7 @@ const Founders = () => {
         <img
           src={FoundersImage}
           alt='founders'
-          className='rounded-2xl w-[50%] mx-auto'
+          className='rounded-3xl w-[50%] mx-auto'
         />
       </div>
       <div className='p-8 flex'>
