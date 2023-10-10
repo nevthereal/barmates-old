@@ -1,13 +1,13 @@
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
-import Founders from "../assets/FOUNDERS.jpeg";
+import FoundersImage from "../assets/FOUNDERS.jpeg";
 
 const Home = () => {
   return (
     <>
       <Hero />
-      <About />
+      <Founders />
     </>
   );
 };
@@ -49,7 +49,7 @@ const Hero = () => {
   );
 };
 
-const About = () => {
+const Founders = () => {
   return (
     <div
       className='grid grid-flow-row md:grid-flow-col text-bmBlue1'
@@ -57,10 +57,10 @@ const About = () => {
     >
       <div className='flex flex-col justify-center p-2 md:p-8'>
         <h1 className='mx-auto my-2 text-2xl md:text-4xl font-black font-[Montserrat]'>
-          The Founders
+          The FoundersFoundersImage
         </h1>
         <img
-          src={Founders}
+          src={FoundersImage}
           alt='founders'
           className='rounded-2xl w-[50%] mx-auto'
         />
