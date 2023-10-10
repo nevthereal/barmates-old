@@ -71,6 +71,10 @@ const Founders = () => {
           Switzerland. We are rowing athletes at the Belvoir Rowing Club Zurich.
           We love protein and energy bars, but we figured, there is no perfect
           one. In 2023 we came up with the idea to create our own bars.
+          <br />
+          While Marko is busy building our reach and community, Neville is doing
+          all the design work and logistics for the business, like package
+          designing, manufacture of the bars or web designing.
         </p>
       </div>
     </div>
