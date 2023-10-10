@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    @apply scroll-smooth
+}
+
 .hero {
     background-image: url(./assets/line.svg);
     background-repeat: no-repeat;
