@@ -56,7 +56,7 @@ const Founders = () => {
       id='about'
     >
       <div className='flex flex-col justify-center p-2 md:p-8'>
-        <h1 className='mx-auto my-2 text-2xl md:text-4xl font-black font-[Montserrat]'>
+        <h1 className='mx-auto my-2 md:my-4 text-2xl md:text-4xl font-black font-[Montserrat]'>
           The Founders
         </h1>
         <motion.img
