@@ -59,7 +59,8 @@ const Founders = () => {
         <h1 className='mx-auto my-2 text-2xl md:text-4xl font-black font-[Montserrat]'>
           The Founders
         </h1>
-        <img
+        <motion.img
+          whileHover={{ scale: 1.05, rotate: 2 }}
           src={FoundersImage}
           alt='founders'
           className='rounded-3xl w-[50%] mx-auto'

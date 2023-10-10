@@ -1,4 +1,5 @@
 import BarMatesLogo from "../assets/LOGO ROUNDED RASTER.png";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   const style = {
@@ -10,7 +11,8 @@ const Footer = () => {
     <footer>
       <div className='grid md:grid-flow-col grid-flow-row text-bmPink1 p-4 md:pt-10'>
         <div className='text-center md:text-left flex flex-col md:flex-row gap-2 md:gap-8 justify-center mb-2 md:mb-0'>
-          <img
+          <motion.img
+            whileHover={{ scale: 1.1, rotate: 6 }}
             src={BarMatesLogo}
             alt='barmates logo'
             className='md:h-24 aspect-square h-24 mx-auto md:mx-0 hidden md:block'
