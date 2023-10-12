@@ -1,6 +1,7 @@
+import { useEffect, useRef } from "react";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { motion } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 import FoundersImage from "../assets/FOUNDERS.jpeg";
 import BarPNG from "../assets/BAR RASTER.png";
 
@@ -82,24 +83,53 @@ const Founders = () => {
 };
 
 const Company = () => {
+  const ref = useRef(null);
+  const inView = useInView(ref);
+  const animation = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      animation.start({
+        y: 0,
+        opacity: 100,
+        transition: {
+          type: "spring",
+          duration: "0.7",
+          bounce: 0.3,
+        },
+      });
+    }
+    if (!inView) {
+      animation.start({ y: 100, opacity: 50 });
+    }
+  }, [inView]);
+
   return (
     <div
       className='grid grid-rows-2 md:grid-rows-none md:grid-cols-2 text-bmPink1'
       id='about'
     >
-      <div className='flex flex-col justify-center p-2 md:p-8'>
+      <motion.div
+        ref={ref}
+        animate={animation}
+        className='flex flex-col justify-center p-2 md:p-8'
+      >
         <h1 className='mx-auto my-2 md:my-4 text-4xl font-black font-[Montserrat]'>
           The Company
         </h1>
         <motion.img
-          whileHover={{ scale: 1.1, rotate: 2 }}
+          whileHover={{ scale: 1.1, rotate: 4 }}
           src={BarPNG}
           alt='founders'
           className='rounded-3xl w-[75%] md:w-[50%] mx-auto'
         />
-      </div>
+      </motion.div>
       <div className='p-8 flex'>
-        <p className='my-auto text-lg md:text-xl'>
+        <motion.p
+          className='my-auto text-lg md:text-xl'
+          ref={ref}
+          animate={animation}
+        >
           <span className='font-[Montserrat] font-bold hover:text-bmBlue1 duration-300'>
             BarMates
           </span>{" "}
@@ -108,7 +138,7 @@ const Company = () => {
           only wanted to resell known brands. <br />
           We soon then decided to switch to our own bars since we wanted to try
           something completely new.
-        </p>
+        </motion.p>
       </div>
     </div>
   );
