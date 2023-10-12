@@ -47,7 +47,7 @@ const Footer = () => {
         </div>
       </div>
       <div className='text-center py-1 border-t border-bmPink4 font-bold font-[Montserrat] text-bmPink1'>
-        <a href='https://github.com/nevthereal/'>© Neville Brem 2023</a>
+        <a href='https://github.com/nevthereal/barmates'>© Neville Brem 2023</a>
       </div>
     </footer>
   );
