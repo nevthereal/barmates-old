@@ -26,9 +26,18 @@ const Footer = () => {
             viewport={{ once: true }}
             className='my-auto'
           >
-            <p className='font-[Montserrat] font-black italic text-xl md:text-4xl'>
-              BarMates
-            </p>
+            <h2 className='font-[Montserrat] font-black italic text-xl md:text-4xl'>
+              {["B", "a", "r", "M", "a", "t", "e", "s"].map((letter, index) => {
+                return (
+                  <span
+                    className='hover:text-bmBlue1 duration-300 ease-in-out'
+                    key={index}
+                  >
+                    {letter}
+                  </span>
+                );
+              })}
+            </h2>
             <p className='font-semibold'>Zurich, Switzerland</p>
           </motion.div>
         </div>

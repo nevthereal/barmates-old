@@ -29,7 +29,16 @@ const Hero = () => {
         className='mx-auto my-auto'
       >
         <h1 className='text-bmPink1 font-black text-6xl md:text-9xl font-[Montserrat]'>
-          BarMates
+          {["B", "a", "r", "M", "a", "t", "e", "s"].map((letter, index) => {
+            return (
+              <span
+                className='hover:text-bmBlue1 duration-300 ease-in-out'
+                key={index}
+              >
+                {letter}
+              </span>
+            );
+          })}
         </h1>
         <p className='text-bmBlue1 font-bold text-base md:text-3xl'>
           Innovative bars made in Switzerland
