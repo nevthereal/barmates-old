@@ -11,6 +11,7 @@ const Header = () => {
           src={BarSVG}
           alt='bar'
           whileHover={{ scale: 1.1, rotate: 12 }}
+          whileTap={{ scale: 0.9 }}
         />
       </a>
       <div className='md:text-2xl text-bmPink1 flex gap-2 md:gap-8'>
@@ -27,10 +28,13 @@ const Header = () => {
           Mission
         </a>
       </div>
-      <FontAwesomeIcon
-        className='text-bmBlue1 hover:text-bmBlue2 text-3xl my-auto hover:scale-110 ease-in-out duration-300 cursor-pointer'
-        icon={faUser}
-      />
+      <motion.div
+        className='text-bmBlue1 text-3xl my-auto cursor-pointer'
+        whileHover={{ scale: 1.1, rotate: 12 }}
+        whileTap={{ scale: 0.9 }}
+      >
+        <FontAwesomeIcon icon={faUser} />
+      </motion.div>
     </header>
   );
 };
