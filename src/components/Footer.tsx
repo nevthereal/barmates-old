@@ -12,37 +12,69 @@ const Footer = () => {
       <div className='grid md:grid-flow-col grid-flow-row text-bmPink1 p-4 md:pt-10'>
         <div className='text-center md:text-left flex flex-col md:flex-row gap-2 md:gap-8 justify-center mb-2 md:mb-0'>
           <motion.img
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 100 }}
+            viewport={{ once: true }}
             whileHover={{ scale: 1.1, rotate: 6 }}
             src={BarMatesLogo}
             alt='barmates logo'
             className='md:h-24 aspect-square h-24 mx-auto md:mx-0 hidden md:block'
           />
-          <div className='my-auto'>
+          <motion.div
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 100 }}
+            viewport={{ once: true }}
+            className='my-auto'
+          >
             <p className='font-[Montserrat] font-black italic text-xl md:text-4xl'>
               BarMates
             </p>
             <p className='font-semibold'>Zurich, Switzerland</p>
-          </div>
+          </motion.div>
         </div>
         <div className='grid md:grid-flow-col grid-flow-row text-lg text-center md:text-left'>
           <div className='my-2 md:my-0'>
-            <h1 className={style.listHeading}>Founders</h1>
-            <ul className={style.listStyle}>
+            <motion.h1
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 100 }}
+              viewport={{ once: true }}
+              className={style.listHeading}
+            >
+              Founders
+            </motion.h1>
+            <motion.ul
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 100 }}
+              viewport={{ once: true }}
+              className={style.listStyle}
+            >
               <li>
                 <a href='https://instagram.com/marking27'>Marko</a>
               </li>
               <li>
                 <a href='https://instagram.com/nevillebrem'>Neville</a>
               </li>
-            </ul>
+            </motion.ul>
           </div>
           <div className='my-2 md:my-0'>
-            <h1 className={style.listHeading}>Social</h1>
-            <ul className={style.listStyle}>
+            <motion.h1
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 100 }}
+              viewport={{ once: true }}
+              className={style.listHeading}
+            >
+              Social
+            </motion.h1>
+            <motion.ul
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 100 }}
+              viewport={{ once: true }}
+              className={style.listStyle}
+            >
               <li>
                 <a href='https://instagram.com/barmates_official'>Instagram</a>
               </li>
-            </ul>
+            </motion.ul>
           </div>
         </div>
       </div>

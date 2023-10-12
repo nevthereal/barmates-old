@@ -11,4 +11,3 @@ This is the official repository of the [BarMates](https://barmates.ch) Website. 
 - TailwindCSS
 - Font Awesome icons
 - framer-motion
-- typed.js

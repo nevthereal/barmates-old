@@ -1,7 +1,6 @@
-import { useEffect, useRef } from "react";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { motion, useAnimation, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import FoundersImage from "../assets/FOUNDERS.jpeg";
 import BarPNG from "../assets/BAR RASTER.png";
 
@@ -57,7 +56,12 @@ const Founders = () => {
       className='grid grid-rows-2 md:grid-rows-none md:grid-cols-2 text-bmBlue1'
       id='about'
     >
-      <div className='flex flex-col justify-center p-2 md:p-8'>
+      <motion.div
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 100 }}
+        viewport={{ once: true }}
+        className='flex flex-col justify-center p-2 md:p-8'
+      >
         <h1 className='mx-auto my-2 md:my-4 text-4xl font-black font-[Montserrat]'>
           The Founders
         </h1>
@@ -67,51 +71,36 @@ const Founders = () => {
           alt='founders'
           className='rounded-3xl w-[75%] md:w-[50%] mx-auto'
         />
-      </div>
+      </motion.div>
       <div className='p-8 flex'>
-        <p className='my-auto text-lg md:text-xl'>
+        <motion.p
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 100 }}
+          viewport={{ once: true }}
+          className='my-auto text-lg md:text-xl'
+        >
           We (Marko and Neville) are two 16 year old students from Zurich,
           Switzerland. We are rowing athletes at the Belvoir Rowing Club Zurich.
           We love protein and energy bars. <br />
           While Marko is busy building our reach and community, Neville is doing
           all the design work and logistics for the business, like package
           designing, manufacture of the bars or web designing.
-        </p>
+        </motion.p>
       </div>
     </div>
   );
 };
 
 const Company = () => {
-  const ref = useRef(null);
-  const inView = useInView(ref);
-  const animation = useAnimation();
-
-  useEffect(() => {
-    if (inView) {
-      animation.start({
-        y: 0,
-        opacity: 100,
-        transition: {
-          type: "spring",
-          duration: "0.7",
-          bounce: 0.3,
-        },
-      });
-    }
-    if (!inView) {
-      animation.start({ y: 100, opacity: 50 });
-    }
-  }, [inView]);
-
   return (
     <div
       className='grid grid-rows-2 md:grid-rows-none md:grid-cols-2 text-bmPink1'
       id='about'
     >
       <motion.div
-        ref={ref}
-        animate={animation}
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 100 }}
+        viewport={{ once: true }}
         className='flex flex-col justify-center p-2 md:p-8'
       >
         <h1 className='mx-auto my-2 md:my-4 text-4xl font-black font-[Montserrat]'>
@@ -127,8 +116,9 @@ const Company = () => {
       <div className='p-8 flex'>
         <motion.p
           className='my-auto text-lg md:text-xl'
-          ref={ref}
-          animate={animation}
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 100 }}
+          viewport={{ once: true }}
         >
           <span className='font-[Montserrat] font-bold hover:text-bmBlue1 duration-300'>
             BarMates
