@@ -100,7 +100,7 @@ const Company = () => {
       </div>
       <div className='p-8 flex'>
         <p className='my-auto text-lg md:text-xl'>
-          <span className='font-[Montserrat] font-bold hover:text-bmBlue1 duration-300 ease-in-out'>
+          <span className='font-[Montserrat] font-bold hover:text-bmBlue1 duration-300'>
             BarMates
           </span>{" "}
           was founded 2023 in Zurich, Switzerland. We figured, that there were
