@@ -20,8 +20,8 @@ const Hero = () => {
         animate={{ translateY: 0, opacity: 1 }}
         transition={{
           type: "spring",
-          stiffness: 250,
-          damping: 20,
+          stiffness: 150,
+          damping: 10,
           duration: 750,
         }}
         className='mx-auto my-auto'
@@ -33,18 +33,17 @@ const Hero = () => {
           Innovative bars made in Switzerland
         </p>
       </motion.div>
-      <a
+      <motion.a
+        whileTap={{ scale: 0.8 }}
         href='#about'
-        className='text-bmBlue1 hover:text-bmBlue2 mb-8 group mx-auto'
+        className='text-bmBlue1 mb-8 group mx-auto'
       >
-        <p className='md:text-xl font-bold group-hover:text-bmBlue2 duration-200'>
-          Find out more!
-        </p>
+        <p className='md:text-xl font-bold duration-200'>Find out more!</p>
         <FontAwesomeIcon
           className='text-2xl md:text-4xl group-hover:translate-y-2 duration-200 ease-in-out'
           icon={faChevronDown}
         />
-      </a>
+      </motion.a>
     </div>
   );
 };
