@@ -2,12 +2,14 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 import FoundersImage from "../assets/FOUNDERS.jpeg";
+import BarPNG from "../assets/BAR RASTER.png";
 
 const Home = () => {
   return (
     <>
       <Hero />
       <Founders />
+      <Company />
     </>
   );
 };
@@ -16,13 +18,13 @@ const Hero = () => {
   return (
     <div className='h-[70dvh] hero flex flex-col text-center'>
       <motion.div
-        initial={{ translateY: 200, opacity: 0 }}
-        animate={{ translateY: 0, opacity: 1 }}
+        initial={{ scale: 0, rotate: 180 }}
+        animate={{ rotate: 0, scale: 1 }}
         transition={{
           type: "spring",
-          stiffness: 150,
-          damping: 10,
-          duration: 750,
+          stiffness: 260,
+          damping: 20,
+          duration: 500,
         }}
         className='mx-auto my-auto'
       >
@@ -51,7 +53,7 @@ const Hero = () => {
 const Founders = () => {
   return (
     <div
-      className='grid grid-flow-row md:grid-flow-col text-bmBlue1'
+      className='grid grid-rows-2 md:grid-rows-none md:grid-cols-2 text-bmBlue1'
       id='about'
     >
       <div className='flex flex-col justify-center p-2 md:p-8'>
@@ -69,12 +71,43 @@ const Founders = () => {
         <p className='my-auto text-lg md:text-xl'>
           We (Marko and Neville) are two 16 year old students from Zurich,
           Switzerland. We are rowing athletes at the Belvoir Rowing Club Zurich.
-          We love protein and energy bars, but we figured, there is no perfect
-          one. In 2023 we came up with the idea to create our own bars.
-          <br />
+          We love protein and energy bars. <br />
           While Marko is busy building our reach and community, Neville is doing
           all the design work and logistics for the business, like package
           designing, manufacture of the bars or web designing.
+        </p>
+      </div>
+    </div>
+  );
+};
+
+const Company = () => {
+  return (
+    <div
+      className='grid grid-rows-2 md:grid-rows-none md:grid-cols-2 text-bmPink1'
+      id='about'
+    >
+      <div className='flex flex-col justify-center p-2 md:p-8'>
+        <h1 className='mx-auto my-2 md:my-4 text-4xl font-black font-[Montserrat]'>
+          The Company
+        </h1>
+        <motion.img
+          whileHover={{ scale: 1.1, rotate: 2 }}
+          src={BarPNG}
+          alt='founders'
+          className='rounded-3xl w-[75%] md:w-[50%] mx-auto'
+        />
+      </div>
+      <div className='p-8 flex'>
+        <p className='my-auto text-lg md:text-xl'>
+          <span className='font-[Montserrat] font-bold hover:text-bmBlue1 duration-300 ease-in-out'>
+            BarMates
+          </span>{" "}
+          was founded 2023 in Zurich, Switzerland. We figured, that there were
+          no 'perfect' bars, so we went ahead and created our own. Originally we
+          only wanted to resell known brands. <br />
+          We soon then decided to switch to our own bars since we wanted to try
+          something completely new.
         </p>
       </div>
     </div>
