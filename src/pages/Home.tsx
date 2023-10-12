@@ -16,7 +16,7 @@ const Home = () => {
 
 const Hero = () => {
   return (
-    <div className='h-[70dvh] hero flex flex-col text-center'>
+    <div className='h-[90dvh] hero flex flex-col text-center'>
       <motion.div
         initial={{ scale: 0, rotate: 180 }}
         animate={{ rotate: 0, scale: 1 }}
