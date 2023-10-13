@@ -69,7 +69,7 @@ const Founders = () => {
       <motion.div
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 100 }}
-        viewport={{ once: true, margin: "0px 0px -100px 0px" }}
+        viewport={{ once: true, margin: "0px 0px -10% 0px" }}
         className='flex flex-col justify-center p-2 md:p-8'
       >
         <h1 className='mx-auto my-2 md:my-4 text-4xl font-black font-[Montserrat]'>
@@ -86,7 +86,7 @@ const Founders = () => {
         <motion.p
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 100 }}
-          viewport={{ once: true, margin: "0px 0px -100px 0px" }}
+          viewport={{ once: true, margin: "0px 0px -10% 0px" }}
           className='my-auto text-lg md:text-xl'
         >
           We (Marko and Neville) are two 16 year old students from Zurich,
@@ -110,7 +110,7 @@ const Company = () => {
       <motion.div
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 100 }}
-        viewport={{ once: true, margin: "0px 0px -50px 0px" }}
+        viewport={{ once: true, margin: "0px 0px -10% 0px" }}
         className='flex flex-col justify-center p-2 md:p-8'
       >
         <h1 className='mx-auto my-2 md:my-4 text-4xl font-black font-[Montserrat]'>
@@ -128,7 +128,7 @@ const Company = () => {
           className='my-auto text-lg md:text-xl'
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 100 }}
-          viewport={{ once: true, margin: "0px 0px -50px 0px" }}
+          viewport={{ once: true, margin: "0px 0px -10% 0px" }}
         >
           <span className='font-[Montserrat] font-bold hover:text-bmBlue1 duration-300'>
             BarMates
