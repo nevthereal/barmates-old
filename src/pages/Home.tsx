@@ -146,11 +146,52 @@ const Company = () => {
 
 const Newsletter = () => {
   return (
-    <div>
-      <div>
-        <h1>Newsletter</h1>
-      </div>
-      <div></div>
+    <div className='bg-bmBlue1 text-white py-8'>
+      <motion.div
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 100 }}
+        viewport={{ once: true, margin: "0px 0px -10% 0px" }}
+        className='text-center mb-4'
+      >
+        <h1 className='font-[Montserrat] italic font-black text-4xl md:text-6xl'>
+          Newsletter
+        </h1>
+        <p className='font-bold text-sm md:text-base'>
+          Don't miss out on updates and exclusive deals!
+        </p>
+      </motion.div>
+      <motion.div
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 100 }}
+        viewport={{ once: true, margin: "0px 0px -10% 0px" }}
+        className='flex w-max mx-auto bg-bmBlue4 border-2 border-white rounded-2xl text-bmBlue1'
+      >
+        <motion.form
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 100 }}
+          viewport={{ once: true, margin: "0px 0px -10% 0px" }}
+          className='p-4 md:p-8 mx-auto'
+          onSubmit={(e) => e.preventDefault()}
+        >
+          <p className='font-bold text-xl md:text-2xl mb-2'>
+            Put in your{" "}
+            <span className='hover:text-bmPink1 duration-300'>email</span>:
+          </p>
+          <input
+            className='text-xl md:text-xl rounded-lg text-black p-2'
+            type='email'
+          />
+          <br className='md:hidden' />
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            type='submit'
+            className='text-xl md:text-xl rounded-lg bg-bmBlue1 text-white p-2 md:ml-2 mt-2 md:mt-0 font-bold mx-auto font-serif'
+          >
+            Sign Up!
+          </motion.button>
+        </motion.form>
+      </motion.div>
     </div>
   );
 };
