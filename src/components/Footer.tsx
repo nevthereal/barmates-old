@@ -14,7 +14,7 @@ const Footer = () => {
           <motion.img
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 100 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "0px 0px 75px 0px" }}
             whileHover={{ scale: 1.1, rotate: 6 }}
             src={BarMatesLogo}
             alt='barmates logo'
@@ -23,7 +23,7 @@ const Footer = () => {
           <motion.div
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 100 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "0px 0px 75px 0px" }}
             className='my-auto'
           >
             <h2 className='font-[Montserrat] font-black italic text-xl md:text-4xl'>
@@ -46,7 +46,7 @@ const Footer = () => {
             <motion.h1
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 100 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "0px 0px 75px 0px" }}
               className={style.listHeading}
             >
               Founders
@@ -54,7 +54,7 @@ const Footer = () => {
             <motion.ul
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 100 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "0px 0px 75px 0px" }}
               className={style.listStyle}
             >
               <li>
@@ -69,7 +69,7 @@ const Footer = () => {
             <motion.h1
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 100 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "0px 0px 75px 0px" }}
               className={style.listHeading}
             >
               Social
@@ -77,7 +77,7 @@ const Footer = () => {
             <motion.ul
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 100 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "0px 0px 75px 0px" }}
               className={style.listStyle}
             >
               <li>
