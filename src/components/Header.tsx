@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const Header = () => {
   return (
     <header className='flex justify-between p-2 md:p-4 bg-white uppercase font-black font-[Montserrat] h-[10dvh]'>
-      <a href='/' className='w-20 md:w-24 my-auto'>
+      <a href='/' className='w-[12dvh] my-auto'>
         <motion.img
           src={BarSVG}
           alt='bar'
