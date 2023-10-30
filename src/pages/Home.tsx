@@ -1,10 +1,10 @@
-import axios from 'axios';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { motion } from 'framer-motion';
-import FoundersImage from '../assets/FOUNDERS.jpeg';
-import BarPNG from '../assets/BAR RASTER.png';
-import { useState } from 'react';
+import axios from "axios";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { motion } from "framer-motion";
+import FoundersImage from "../assets/FOUNDERS.jpeg";
+import BarPNG from "../assets/BAR RASTER.png";
+import { useState } from "react";
 
 const Home = () => {
   return (
@@ -24,7 +24,7 @@ const Hero = () => {
         initial={{ scale: 0, rotate: 180 }}
         animate={{ rotate: 0, scale: 1 }}
         transition={{
-          type: 'spring',
+          type: "spring",
           stiffness: 260,
           damping: 20,
           duration: 500,
@@ -32,7 +32,7 @@ const Hero = () => {
         className='mx-auto my-auto'
       >
         <h1 className='text-bmPink1 font-black text-6xl md:text-9xl font-[Montserrat]'>
-          {['B', 'a', 'r', 'M', 'a', 't', 'e', 's'].map((letter, index) => {
+          {["B", "a", "r", "M", "a", "t", "e", "s"].map((letter, index) => {
             return (
               <span
                 className='hover:text-bmBlue1 duration-300 ease-in-out'
@@ -71,7 +71,7 @@ const Founders = () => {
       <motion.div
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 100 }}
-        viewport={{ once: true, margin: '0px 0px -10% 0px' }}
+        viewport={{ once: true, margin: "0px 0px -10% 0px" }}
         className='flex flex-col justify-center p-2 md:p-8'
       >
         <h1 className='mx-auto my-2 md:my-4 text-4xl font-black font-[Montserrat]'>
@@ -88,7 +88,7 @@ const Founders = () => {
         <motion.p
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 100 }}
-          viewport={{ once: true, margin: '0px 0px -10% 0px' }}
+          viewport={{ once: true, margin: "0px 0px -10% 0px" }}
           className='my-auto text-lg md:text-xl'
         >
           We (Marko and Neville) are two 16 year old students from Zurich,
@@ -112,7 +112,7 @@ const Company = () => {
       <motion.div
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 100 }}
-        viewport={{ once: true, margin: '0px 0px -10% 0px' }}
+        viewport={{ once: true, margin: "0px 0px -10% 0px" }}
         className='flex flex-col justify-center p-2 md:p-8'
       >
         <h1 className='mx-auto my-2 md:my-4 text-4xl font-black font-[Montserrat]'>
@@ -130,11 +130,11 @@ const Company = () => {
           className='my-auto text-lg md:text-xl'
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 100 }}
-          viewport={{ once: true, margin: '0px 0px -10% 0px' }}
+          viewport={{ once: true, margin: "0px 0px -10% 0px" }}
         >
           <span className='font-[Montserrat] font-bold hover:text-bmBlue1 duration-300'>
             BarMates
-          </span>{' '}
+          </span>{" "}
           was founded 2023 in Zurich, Switzerland. We figured, that there were
           no 'perfect' bars, so we went ahead and created our own. Originally we
           only wanted to resell known brands. <br />
@@ -147,9 +147,9 @@ const Company = () => {
 };
 
 const Newsletter = () => {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   console.log(import.meta.env.VITE_CK_API_KEY);
 
   const handleFormSubmit = async (e: { preventDefault: () => void }) => {
@@ -168,7 +168,7 @@ const Newsletter = () => {
         data,
         {
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
         }
       );
@@ -177,7 +177,7 @@ const Newsletter = () => {
         setSubscribed(true);
       }
     } catch (err) {
-      setError('An error occurred. Please try again.');
+      setError("An error occurred. Please try again.");
     }
   };
 
@@ -186,7 +186,7 @@ const Newsletter = () => {
       <motion.div
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 100 }}
-        viewport={{ once: true, margin: '0px 0px -10% 0px' }}
+        viewport={{ once: true, margin: "0px 0px -10% 0px" }}
         className='text-center mb-4'
       >
         <h1 className='font-[Montserrat] italic font-black text-4xl md:text-6xl'>
@@ -199,18 +199,18 @@ const Newsletter = () => {
       <motion.div
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 100 }}
-        viewport={{ once: true, margin: '0px 0px -10% 0px' }}
+        viewport={{ once: true, margin: "0px 0px -10% 0px" }}
         className='flex w-max mx-auto bg-bmBlue4 border-2 border-white rounded-2xl text-bmBlue1'
       >
         <motion.form
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 100 }}
-          viewport={{ once: true, margin: '0px 0px -10% 0px' }}
+          viewport={{ once: true, margin: "0px 0px -10% 0px" }}
           className='p-4 md:p-8 mx-auto'
           onSubmit={handleFormSubmit}
         >
           <p className='font-bold text-xl md:text-2xl mb-2'>
-            Put in your{' '}
+            Put in your{" "}
             <span className='hover:text-bmPink1 duration-300'>email</span>:
           </p>
           <input
@@ -230,7 +230,11 @@ const Newsletter = () => {
           >
             Sign Up!
           </motion.button>
-          {subscribed && <p>Thank you for subscribing to our newsletter!</p>}
+          {subscribed && (
+            <p>
+              Thank you for subscribing. Check your inbox to verify your email
+            </p>
+          )}
           {error && <p className='text-red-500'>{error}</p>}
         </motion.form>
       </motion.div>
