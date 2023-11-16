@@ -1,4 +1,4 @@
-import BarSVG from "../assets/BAR VECTOR.svg";
+import BarPNG from "../assets/BAR RASTER.png";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
@@ -8,7 +8,7 @@ const Header = () => {
     <header className='flex justify-between p-2 md:p-4 bg-white uppercase font-black font-[Montserrat] h-[10dvh]'>
       <a href='/' className='w-[12dvh] my-auto'>
         <motion.img
-          src={BarSVG}
+          src={BarPNG}
           alt='bar'
           whileHover={{ scale: 1.1, rotate: 12 }}
           whileTap={{ scale: 0.9 }}

@@ -5,6 +5,9 @@ import { motion } from "framer-motion";
 import FoundersImage from "../assets/FOUNDERS.jpeg";
 import BarPNG from "../assets/BAR RASTER.png";
 import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 const Home = () => {
   return (
@@ -147,17 +150,24 @@ const Company = () => {
 };
 
 const Newsletter = () => {
-  const [email, setEmail] = useState("");
-  const [subscribed, setSubscribed] = useState(false);
+  const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
-  console.log(import.meta.env.VITE_CK_API_KEY);
+  const schema = z.object({
+    email: z.string().email(),
+  });
 
-  const handleFormSubmit = async (e: { preventDefault: () => void }) => {
-    e.preventDefault();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: zodResolver(schema),
+  });
 
+  const onSubmit = async (data: any) => {
     try {
-      const data = {
-        email,
+      const inputs = {
+        email: data.email,
         api_key: import.meta.env.VITE_CK_API_KEY,
       };
 
@@ -165,7 +175,7 @@ const Newsletter = () => {
         `https://api.convertkit.com/v3/forms/${
           import.meta.env.VITE_CK_FORM_ID
         }/subscribe`,
-        data,
+        inputs,
         {
           headers: {
             "Content-Type": "application/json",
@@ -174,7 +184,7 @@ const Newsletter = () => {
       );
 
       if (response.status === 200) {
-        setSubscribed(true);
+        setSuccess(true);
       }
     } catch (err) {
       setError("An error occurred. Please try again.");
@@ -207,7 +217,7 @@ const Newsletter = () => {
           whileInView={{ y: 0, opacity: 100 }}
           viewport={{ once: true, margin: "0px 0px -10% 0px" }}
           className='p-4 md:p-8 mx-auto'
-          onSubmit={handleFormSubmit}
+          onSubmit={handleSubmit(onSubmit)}
         >
           <p className='font-bold text-xl md:text-2xl mb-2'>
             Put in your{" "}
@@ -215,11 +225,8 @@ const Newsletter = () => {
           </p>
           <input
             className='text-xl md:text-xl rounded-lg text-black p-2'
+            {...register("email")}
             type='email'
-            value={email}
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
           />
           <br className='md:hidden' />
           <motion.button
@@ -230,12 +237,19 @@ const Newsletter = () => {
           >
             Sign Up!
           </motion.button>
-          {subscribed && (
-            <p>
-              Thank you for subscribing. Check your inbox to verify your email
+          {errors.email && (
+            <p className='text-red-500'>Please enter a valid email</p>
+          )}
+          {success && (
+            <p className='font-semibold'>
+              Success! Check your inbox to verify your email
             </p>
           )}
-          {error && <p className='text-red-500'>{error}</p>}
+          {error && (
+            <p className='text-red-500 font-semibold'>
+              An error occured... try again later
+            </p>
+          )}
         </motion.form>
       </motion.div>
     </div>
